@@ -41,6 +41,7 @@
     - name: Prerequisite check for quagga
       apt:
         name: libglib2.0-0,openvswitch-switch
+        allow_unauthenticated: yes
         state: present
       when: quagga_install_method == "deb_repo"
 
